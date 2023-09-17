@@ -195,7 +195,7 @@ h4 {
     "chatPicsection mentorsPicsection"
     "chatContent mentorsContent";
     margin-top: -170px;
-    margin-bottom: -170px; /*edit this one for bottom spacing*/
+    margin-bottom: -180px; /*edit this one for bottom spacing*/
 }
 
 #chatTitle {
