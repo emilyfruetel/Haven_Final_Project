@@ -1,3 +1,5 @@
+/*general*/
+
 html,body
 {
     width: 100%;
@@ -6,6 +8,8 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
 }
+
+/*header section + jumbotron*/
 
 header {
     background-image: linear-gradient(#FDC5F7, #8EAEFF);
@@ -89,12 +93,25 @@ button {
     height: 100px;
 }
 
+/*intro section*/
+
 h3 {
     font-family: "Exo 2";
     font-size: 35px;
 }
 
+.introContent {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "havenTitle"
+    "appPics"
+    "missionStatement";
+}
+
 #havenTitle {
+    grid-area: havenTitle;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -102,9 +119,12 @@ h3 {
 }
 
 #appPics {
+    grid-area: appPics;
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -160px;
 }
 
 #havenPics {
@@ -112,16 +132,14 @@ h3 {
     height: 400px;
     border-radius: 45px;
     padding: 15px;
-    margin-left: 15px;
 }
 
 #missionStatement {
+    grid-area: missionStatement;
     display: flex;
-    flex-direction: column;
+    justify-self: center;
     text-align: center;
-    padding: 20px;
-    margin-left: 17%;
-    margin-right: 17%;
+    padding-top: 40px;
     max-width: 750px;
 }
 
@@ -129,6 +147,8 @@ p {
     font-family: "Fira Sans Condensed";
     font-size: 20px;
 }
+
+/*features section*/
 
 .sectionBar {
     width:100%;
@@ -228,6 +248,8 @@ h4 {
     height: 300px;
 }
 
+/*About Us Section*/
+
 .picsAndTitles {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -292,6 +314,8 @@ h4 {
     grid-area: bName;
     margin-bottom: 50px;
 }
+
+/*Footer section*/
 
 h5 {
     font-family: "Fira Sans Condensed";
