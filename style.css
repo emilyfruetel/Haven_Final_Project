@@ -349,63 +349,106 @@ h6 {
 footer {
     background-image: linear-gradient(#FDC5F7, #8EAEFF);
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    "haven contactTitle"
-    "userInfo userInfo";
+    "havenBottom havenBottom"
+    "downloadCTA contactUsSection"; /*edit this to make the footer grid*/
     padding-bottom: 50px;
 }
 
-#contactTitle {
-    grid-area: contactTitle;
-    text-align: center;
-    max-width: 40%;
-    margin-left: 250px;
-    padding: 15px;
+.titleContainer {
+    grid-area: havenBottom;
+}
+
+#havenBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.downloadCTA {
+    grid-area: downloadCTA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bottomButtons {
+    grid-area: bottomButtons;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.contactUsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactUs {
     display: grid;
-    float: left;
-    margin-top: 110px;
+    justify-content: space-evenly;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "nameBox emailBox"
+    "messageBox messageBox"; /*This is the Contact Us forms, don't mess with this*/
+    padding-top: 20px;
+}
+
+#sendButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #nameBox {
-    grid-area: userInfo;
+    grid-area: nameBox;
     height: 40px;
-    width: 350px;
+    width: 230px;
     border-radius: 15px;
     text-indent: 10px;
     font-family: "Fira Sans Condensed";
-    margin-left: 212px;
 }
 
 #emailBox {
-    grid-area: userInfo;
+    grid-area: emailBox;
     height: 40px;
-    width: 350px;
+    width: 230px;
     border-radius: 15px;
     text-indent: 10px;
     font-family: "Fira Sans Condensed";
-    margin-left: 212px;
+    padding-left: 15px;
 }
 
 #messageBox {
-    grid-area: userInfo;
+    grid-area: messageBox;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
-    width: 350px;
+    width: 494px;
     border-radius: 15px;
     border-color: black;
     border-width: 2px;
     text-indent: 10px;
     font-family: "Fira Sans Condensed";
     color: gray;
-    margin-left: 212px;
-    padding-top: 8px;
+    padding-top: 15px;
+    margin-top: -15px;
+}
+
+#send {
+    background-color: white;
+    font-family: "Fira Sans Condensed";
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border-color: gray;
+    border-width: 5px;
 }
 
 h7 {
@@ -416,16 +459,4 @@ h7 {
 h8 {
     font-family: "Fira Sans Condensed";
     font-size: 15px;
-}
-
-#sendButton {
-    background-color: white;
-    font-family: "Fira Sans Condensed";
-    width: 100px;
-    height: 40px;
-    border-radius: 15px;
-    border-color: gray;
-    border-width: 5px;
-    margin-top: 8px;
-    margin-left: 335px;
 }
