@@ -156,8 +156,19 @@ p {
     background-image: linear-gradient(#FDC5F7, #8EAEFF);
 }
 
+.featureContent {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "featureTitle"
+    "fContent"
+    "space";
+}
+
 .featureTitle {
-    padding: 20px;
+    grid-area: featureTitle;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,11 +182,11 @@ p {
 
 h4 {
     font-family: "Fira Sans Condensed";
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .fContent {
-    margin-top: 20px;
+    grid-area: fContent;
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-columns: 1fr 1fr;
@@ -183,10 +194,13 @@ h4 {
     "chatTitle mentorsTitle"
     "chatPicsection mentorsPicsection"
     "chatContent mentorsContent";
+    margin-top: -170px;
+    margin-bottom: -170px; /*edit this one for bottom spacing*/
 }
 
 #chatTitle {
-    padding: 10px;
+    margin-top: 30px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +208,8 @@ h4 {
 }
 
 #mentorsTitle {
-    padding: 10px;
+    margin-top: 30px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,13 +254,17 @@ h4 {
 }
 
 #chatPic {
-    width: 400px;
-    height: 300px;
+    width: 430px;
+    height: 350px;
 }
 
 #mentorsPic {
-    width: 400px;
-    height: 300px;
+    width: 430px;
+    height: 350px;
+}
+
+#space {
+    grid-area: space;
 }
 
 /*About Us Section*/
