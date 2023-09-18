@@ -349,7 +349,7 @@ h6 {
 footer {
     background-image: linear-gradient(#FDC5F7, #8EAEFF);
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "havenBottom havenBottom"
@@ -366,6 +366,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .downloadCTA {
@@ -453,7 +454,7 @@ footer {
 
 h7 {
     font-family: "Fira Sans Condensed";
-    font-size: 20px;
+    font-size: 25px;
 }
 
 h8 {
